@@ -1,0 +1,161 @@
+#!/bin/bash
+
+#This script is for Arch base systems. Manjaro/Arch
+
+#functions. Add the commands here
+
+updaterepo () { sudo pacman -Syy; }
+updatesystem () { yes | sudo pacman -Syu; }
+noanswer () { echo "Skipping..." ; }
+chrome () { yes | sudo pacman -S chromium; }
+firefox () { yes | sudo pacman -S firefox; }
+neofetch () { yes | sudo pacman -S neofetch; }
+htop () { yes | sudo pacman -S htop; }
+spectacle () { yes | sudo pacman -S spectacle; }
+veracrypt () { (echo 1; yes) | yay veracrypt; }
+libreoffice () { (echo 1; yes) | sudo pacman -S libreoffice; } 
+obs () { yes | sudo pacman -S obs-studio; }
+
+
+#
+#Package and System Update First
+#
+
+echo "Would you like to update your system? (y/n)"
+
+read yesorno
+
+if [ "$yesorno" = y ]; then
+	updaterepo
+elif [ "$yesorno" = y ]; then
+	updatesystem
+	echo "Update Successful."
+elif [ "$yesorno" = n ]; then
+	echo "Skipping..."
+else
+	echo "Not a valid answer. Exiting..."
+	exit 1
+fi
+
+#
+#Chromium Installation
+#
+
+echo "Would you like to install Chrome? (y/n)"
+
+read yesorno
+
+if [ "$yesorno" = y ]; then
+	chrome
+	echo "Installed Successfully."
+elif [ "$yesorno" = n ]; then
+	noanswer
+else
+	echo "Not a valid answer. Exiting..."
+	exit 1
+fi
+
+#
+#Firefox Installation
+#
+
+echo "Would you like to install Firefox? (y/n)"
+
+read yesorno
+
+if [ "$yesorno" = y ]; then
+	firefox
+	echo "Installed Successfully."
+elif [ "$yesorno" = n ]; then
+	noanswer
+else
+	echo "not a valid answer. Exiting"
+	exit 1
+fi
+
+#
+#Neofetch installation
+#
+
+echo "Would you like to install Neofetch? (y/n)"
+
+read yesorno
+
+if [ "$yesorno" = y ]; then
+        neofetch
+	echo "Installed."
+elif [ "$yesorno" = n ]; then
+        noanswer
+else
+        echo "not a valid answer. Exiting"
+	exit 1
+fi
+
+#
+#htop Installation
+#
+
+echo "Would you like to install htop? (y/n)"
+
+read yesorno
+
+if [ "$yesorno" = y ]; then
+        htop
+        echo "Installed."
+elif [ "$yesorno" = n ]; then
+        noanswer
+else
+        echo "not a valid answer. Exiting"
+	
+fi
+
+#Spectacle (screenshot tool)
+
+echo "Would you like to install Spectacle? (y/n)"
+
+read yesorno
+
+if [ "$yesorno" = y ]; then
+        spectacle
+        echo "Installed."
+elif [ "$yesorno" = n ]; then
+        noanswer
+else
+        echo "not a valid answer. Exiting"
+fi
+
+#Libreoffice
+
+echo "Would you like to install LibreOffice? (y/n)"
+
+read yesorno
+
+if [ "$yesorno" = y ]; then
+        libreoffice
+        echo "Installed."
+elif [ "$yesorno" = n ]; then
+        noanswer
+else
+        echo "not a valid answer. Exiting"
+	exit 1
+fi
+
+#obs
+
+echo "Would you like to install OBS (Open Broadcast Software)? (y/n)"
+
+read yesorno
+
+if [ "$yesorno" = y ]; then
+        obs
+        echo "Installed."
+elif [ "$yesorno" = n ]; then
+        noanswer
+else
+        echo "not a valid answer. Exiting"
+	exit 1
+fi
+
+
+
+echo "Installer complete. Goodbye!"
