@@ -21,7 +21,7 @@ I created this script in order to install arch programs that I find are useful f
 * Veracrypt         -Encryption software for files, folders and drives
 * LibreOffice       -Office suite for linux
 * OBS               -Open Broadcast Software. Used for streaming as well as screen recording
-
+* Thunderbird       -Email Client
 
 # Installation
 To install the script on your system, clone the repo and run.
