@@ -46,6 +46,7 @@ elif [ "$yesorno" = y ]; then
 	echo " "
 elif [ "$yesorno" = n ]; then
 	echo "Skipping..."
+	echo " "
 elif [ "$yesorno" = e ]; then
 	echo "Exiting..."
 	exit 1
@@ -69,6 +70,7 @@ if [ "$yesorno" = y ]; then
 	echo " "
 elif [ "$yesorno" = n ]; then
 	noanswer
+	echo " "
 elif [ "$yesorno" = e ]; then
 	echo "Exiting..."
 	exit 1
@@ -92,6 +94,7 @@ if [ "$yesorno" = y ]; then
 	echo " "
 elif [ "$yesorno" = n ]; then
 	noanswer
+	echo " "
 elif [ "$yesorno" = e ]; then
 	echo "Exiting..."
 	exit 1
@@ -115,6 +118,7 @@ if [ "$yesorno" = y ]; then
 	echo " "
 elif [ "$yesorno" = n ]; then
         noanswer
+	echo " "
 elif [ "$yesorno" = e ]; then
 	echo "Exiting..."
 	exit 1
@@ -138,6 +142,7 @@ if [ "$yesorno" = y ]; then
 	echo " "
 elif [ "$yesorno" = n ]; then
         noanswer
+	echo " "
 elif [ "$yesorno" = e ]; then
 	echo "Exiting..."
 	exit 1
@@ -159,6 +164,7 @@ if [ "$yesorno" = y ]; then
 	echo " "
 elif [ "$yesorno" = n ]; then
         noanswer
+	echo " "
 elif [ "$yesorno" = e ]; then
 	echo "Exiting..."
 	exit 1
@@ -179,6 +185,7 @@ if [ "$yesorno" = y ]; then
 	echo " "
 elif [ "$yesorno" = n ]; then
         noanswer
+	echo " "
 elif [ "$yesorno" = e ]; then
 	echo "Exiting..."
 	exit 1
@@ -200,6 +207,7 @@ if [ "$yesorno" = y ]; then
 	echo " "
 elif [ "$yesorno" = n ]; then
         noanswer
+	echo " "
 elif [ "$yesorno" = e ]; then
 	echo "Exiting..."
 	exit 1
