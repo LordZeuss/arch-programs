@@ -31,7 +31,9 @@ obs () { yes | sudo pacman -S obs-studio; }
 #
 
 echo " "
-echo "Would you like to update your system? (y/n)"
+echo "Would you like to update your system? (y/n/e)"
+echo "y=yes | n=no | e=exit"
+echo " "
 
 read yesorno
 
@@ -39,9 +41,14 @@ if [ "$yesorno" = y ]; then
 	updaterepo
 elif [ "$yesorno" = y ]; then
 	updatesystem
+	echo " "
 	echo "Update Successful."
+	echo " "
 elif [ "$yesorno" = n ]; then
 	echo "Skipping..."
+elif [ "$yesorno" = e ]; then
+	echo "Exiting..."
+	exit 1
 else
 	echo "Not a valid answer. Exiting..."
 	exit 1
@@ -51,15 +58,20 @@ fi
 #Chromium Installation
 #
 
-echo "Would you like to install Chrome? (y/n)"
+echo "Would you like to install Chrome? (y/n/e)"
 
 read yesorno
 
 if [ "$yesorno" = y ]; then
 	chrome
+	echo " "
 	echo "Installed Successfully."
+	echo " "
 elif [ "$yesorno" = n ]; then
 	noanswer
+elif [ "$yesorno" = e ]; then
+	echo "Exiting..."
+	exit 1
 else
 	echo "Not a valid answer. Exiting..."
 	exit 1
@@ -69,15 +81,20 @@ fi
 #Firefox Installation
 #
 
-echo "Would you like to install Firefox? (y/n)"
+echo "Would you like to install Firefox? (y/n/e)"
 
 read yesorno
 
 if [ "$yesorno" = y ]; then
 	firefox
+	echo " "
 	echo "Installed Successfully."
+	echo " "
 elif [ "$yesorno" = n ]; then
 	noanswer
+elif [ "$yesorno" = e ]; then
+	echo "Exiting..."
+	exit 1
 else
 	echo "not a valid answer. Exiting"
 	exit 1
@@ -87,15 +104,20 @@ fi
 #Neofetch installation
 #
 
-echo "Would you like to install Neofetch? (y/n)"
+echo "Would you like to install Neofetch? (y/n/e)"
 
 read yesorno
 
 if [ "$yesorno" = y ]; then
         neofetch
-	echo "Installed."
+	echo " "
+	echo "Installed Successfully."
+	echo " "
 elif [ "$yesorno" = n ]; then
         noanswer
+elif [ "$yesorno" = e ]; then
+	echo "Exiting..."
+	exit 1
 else
         echo "not a valid answer. Exiting"
 	exit 1
@@ -105,15 +127,20 @@ fi
 #htop Installation
 #
 
-echo "Would you like to install htop? (y/n)"
+echo "Would you like to install htop? (y/n/e)"
 
 read yesorno
 
 if [ "$yesorno" = y ]; then
         htop
-        echo "Installed."
+        echo " "
+	echo "Installed Successfully."
+	echo " "
 elif [ "$yesorno" = n ]; then
         noanswer
+elif [ "$yesorno" = e ]; then
+	echo "Exiting..."
+	exit 1
 else
         echo "not a valid answer. Exiting"
 	
@@ -121,30 +148,40 @@ fi
 
 #Spectacle (screenshot tool)
 
-echo "Would you like to install Spectacle? (y/n)"
+echo "Would you like to install Spectacle? (y/n/e)"
 
 read yesorno
 
 if [ "$yesorno" = y ]; then
         spectacle
-        echo "Installed."
+        echo " "
+	echo "Installed Successfully."
+	echo " "
 elif [ "$yesorno" = n ]; then
         noanswer
+elif [ "$yesorno" = e ]; then
+	echo "Exiting..."
+	exit 1
 else
         echo "not a valid answer. Exiting"
 fi
 
 #Libreoffice
 
-echo "Would you like to install LibreOffice? (y/n)"
+echo "Would you like to install LibreOffice? (y/n/e)"
 
 read yesorno
 
 if [ "$yesorno" = y ]; then
         libreoffice
-        echo "Installed."
+        echo " "
+	echo "Installed Successfully."
+	echo " "
 elif [ "$yesorno" = n ]; then
         noanswer
+elif [ "$yesorno" = e ]; then
+	echo "Exiting..."
+	exit 1
 else
         echo "not a valid answer. Exiting"
 	exit 1
@@ -152,15 +189,20 @@ fi
 
 #obs
 
-echo "Would you like to install OBS (Open Broadcast Software)? (y/n)"
+echo "Would you like to install OBS (Open Broadcast Software)? (y/n/e)"
 
 read yesorno
 
 if [ "$yesorno" = y ]; then
         obs
-        echo "Installed."
+        echo " "
+	echo "Installed Successfully."
+	echo " "
 elif [ "$yesorno" = n ]; then
         noanswer
+elif [ "$yesorno" = e ]; then
+	echo "Exiting..."
+	exit 1
 else
         echo "not a valid answer. Exiting"
 	exit 1
@@ -168,4 +210,4 @@ fi
 
 
 
-echo "Installer complete. Goodbye!"
+echo "Installer Complete. Goodbye!"
