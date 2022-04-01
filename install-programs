@@ -1,6 +1,15 @@
 #!/bin/bash
 
-#This script is for Arch base systems. Manjaro/Arch
+echo "
+___  ____ _  _ ____    _ _  _ ____ ___ ____ _    _    ____ ____ 
+  /  |___ |  | [__     | |\ | [__   |  |__| |    |    |___ |__/ 
+ /__ |___ |__| ___]    | | \| ___]  |  |  | |___ |___ |___ |  \ 
+                                                                
+"
+
+
+#This script is for Arch base systems. Manjaro/Arch.
+#It's purpose is to install programs that you may find essential.
 
 #functions. Add the commands here
 
@@ -21,6 +30,7 @@ obs () { yes | sudo pacman -S obs-studio; }
 #Package and System Update First
 #
 
+echo " "
 echo "Would you like to update your system? (y/n)"
 
 read yesorno
