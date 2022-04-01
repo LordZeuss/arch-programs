@@ -240,5 +240,29 @@ else
 fi
 
 
+#Yay (AUR Repo Installer)
+
+echo "Would you like to install yay (Install AUR Repos)? (y/n/e)"
+
+read yesorno
+
+if [ "$yesorno" = y ]; then
+	yes | sudo pacman -S base-devel
+	cd /opt
+	sudo git clone https://aur.archlinux.org/yay.git
+	cd yay
+	makepkg -si
+	echo " "
+	echo "Installed Successfully."
+elif [ "$yesorno" = n ]; then
+	echo "Skipping..."
+	echo " "
+elif [ "$yesorno" = e ]; then
+	echo "Exiting..."
+	exit 1
+else
+	echo "Not a valid answer. Exiting..."
+	exit 1
+fi
 
 echo "Installer Complete. Goodbye!"
