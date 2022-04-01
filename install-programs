@@ -22,7 +22,7 @@ neofetch () { yes | sudo pacman -S neofetch; }
 htop () { yes | sudo pacman -S htop; }
 spectacle () { yes | sudo pacman -S spectacle; }
 veracrypt () { (echo 1; yes) | yay veracrypt; }
-libreoffice () { (echo 1; yes) | sudo pacman -S libreoffice; } 
+libreoffice () { yes | sudo pacman -S libreoffice-fresh; } 
 obs () { yes | sudo pacman -S obs-studio; }
 
 
