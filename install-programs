@@ -25,6 +25,8 @@ veracrypt () { (echo 1; yes) | yay veracrypt; }
 libreoffice () { yes | sudo pacman -S libreoffice-fresh; } 
 obs () { yes | sudo pacman -S obs-studio; }
 thunderbird () { yes | sudo pacman -S thunderbird; }
+jdownloader () { echo 1; n; n) | yay jdownloader2; }
+
 
 #
 #Package and System Update First
@@ -329,6 +331,28 @@ elif [ "$yesorno" = e ]; then
 	exit 1
 else
 	echo "Not a valid answer. Exiting..."
+	exit 1
+fi
+
+#JDownloader2 Installer via AUR
+
+echo "Would you like to install JDownloader2? (y/n/e)"
+
+read yesorno
+
+if [ "$yesorno" = y ]; then
+	jdownloader
+	echo " "
+	echo "Installed Successfully."
+	echo " "
+elif [ "$yesorno" = n ]; then
+	noanswer
+	echo " "
+elif [ "$yesorno" = e ]; then
+	echo "Exiting..."
+	exit 1
+else
+	echo "not a valid answer. Exiting"
 	exit 1
 fi
 
