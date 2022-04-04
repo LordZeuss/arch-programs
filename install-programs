@@ -265,4 +265,71 @@ else
 	exit 1
 fi
 
+#Snap package installer
+
+echo "Would you like to install Snap (Installer for Snap Packages)? (y/n/e)"
+
+read yesorno
+
+if [ "$yesorno" = y ]; then
+	git clone https://aur.archlinux.org/snapd.git
+	cd snapd
+	yes | makepkg -si
+	sudo systemctl enable --now snapd.socket
+	sudo ln -s /var/lib/snapd/snap /snap
+	echo " "
+	echo "Installed Successfully."
+elif [ "$yesorno" = n ]; then
+	echo "Skipping..."
+	echo " "
+elif [ "$yesorno" = e ]; then
+	echo "Exiting..."
+	exit 1
+else
+	echo "Not a valid answer. Exiting..."
+	exit 1
+fi
+
+#Telegram install w/ snap
+
+echo "Would you like to install Telegram (Using Snap)? (y/n/e)"
+
+read yesorno
+
+if [ "$yesorno" = y ]; then
+	sudo snap install telegram-desktop
+	echo " "
+	echo "Installed Successfully."
+elif [ "$yesorno" = n ]; then
+	echo "Skipping..."
+	echo " "
+elif [ "$yesorno" = e ]; then
+	echo "Exiting..."
+	exit 1
+else
+	echo "Not a valid answer. Exiting..."
+	exit 1
+fi
+
+#LosslessCut video editor install w/ snap
+
+echo "Would you like to install Losslesscut (Using Snap)? (y/n/e)"
+
+read yesorno
+
+if [ "$yesorno" = y ]; then
+	sudo snap install losslesscut
+	echo " "
+	echo "Installed Successfully."
+elif [ "$yesorno" = n ]; then
+	echo "Skipping..."
+	echo " "
+elif [ "$yesorno" = e ]; then
+	echo "Exiting..."
+	exit 1
+else
+	echo "Not a valid answer. Exiting..."
+	exit 1
+fi
+
 echo "Installer Complete. Goodbye!"
