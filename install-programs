@@ -26,7 +26,7 @@ libreoffice () { yes | sudo pacman -S libreoffice-fresh; }
 obs () { yes | sudo pacman -S obs-studio; }
 thunderbird () { yes | sudo pacman -S thunderbird; }
 jdownloader () { (echo 1; n; n) | yay jdownloader2; }
-
+tor () { (echo 1; n; y) | yay tor-browser; }
 
 #
 #Package and System Update First
@@ -355,5 +355,29 @@ else
 	echo "not a valid answer. Exiting"
 	exit 1
 fi
+
+#Tor Browser
+
+echo "Would you like to install Tor? (y/n/e)"
+
+read yesorno
+
+if [ "$yesorno" = y ]; then
+	tor
+	echo " "
+	echo "Installed Successfully."
+	echo " "
+elif [ "$yesorno" = n ]; then
+	noanswer
+	echo " "
+elif [ "$yesorno" = e ]; then
+	echo "Exiting..."
+	exit 1
+else
+	echo "not a valid answer. Exiting"
+	exit 1
+fi
+
+
 
 echo "Installer Complete. Goodbye!"
