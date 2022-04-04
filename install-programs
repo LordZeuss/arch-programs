@@ -25,7 +25,7 @@ veracrypt () { (echo 1; yes) | yay veracrypt; }
 libreoffice () { yes | sudo pacman -S libreoffice-fresh; } 
 obs () { yes | sudo pacman -S obs-studio; }
 thunderbird () { yes | sudo pacman -S thunderbird; }
-jdownloader () { echo 1; n; n) | yay jdownloader2; }
+jdownloader () { (echo 1; n; n) | yay jdownloader2; }
 
 
 #
