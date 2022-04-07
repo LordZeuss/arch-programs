@@ -252,6 +252,7 @@ if [ "$yesorno" = y ]; then
 	yes | sudo pacman -S base-devel
 	cd /opt
 	sudo git clone https://aur.archlinux.org/yay.git
+	sudo chown -R $USER /opt/yay
 	cd yay
 	makepkg -si
 	echo " "
